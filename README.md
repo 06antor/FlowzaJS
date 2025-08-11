@@ -71,7 +71,8 @@ Hooks receive context objects and support async functions, enabling rich control
 Simply include the `Flowza.js` script on your page:
 
 ```html
-<script src="Flowza.js"></script>```
+<script src="Flowza.js"></script>
+````
 
 ---
 
@@ -83,7 +84,8 @@ Simply include the `Flowza.js` script on your page:
 <div id="app" data-view="home">
   <!-- Your page content here -->
   <a data-router-link href="/about">About</a>
-</div>```
+</div>
+```
 
 ---
 
@@ -134,7 +136,8 @@ This behavior is automatic and requires no additional configuration.
   Flowza.on('beforeEnter', (ctx) => {
     console.log('Entering view:', ctx.view);
   });
-</script>```
+</script>
+```
 
 ---
 
