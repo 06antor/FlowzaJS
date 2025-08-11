@@ -1,4 +1,4 @@
-# BarbaMini
+# FlowzaJS
 
 A lightweight, zero-dependency client-side router and page transition library for building fast, smooth, SPA-like navigation experiences.
 
@@ -6,7 +6,7 @@ A lightweight, zero-dependency client-side router and page transition library fo
 
 ## Overview
 
-BarbaMini enables seamless page transitions by intercepting link clicks and fetching page content via AJAX. It automatically handles:
+FlowzaJS enables seamless page transitions by intercepting link clicks and fetching page content via AJAX. It automatically handles:
 
 - Dynamic content replacement inside a root container (`#app`)
 - Page asset management (CSS & JS injection/removal)
@@ -23,7 +23,7 @@ BarbaMini enables seamless page transitions by intercepting link clicks and fetc
 ### 1. SPA-style Navigation
 
 - Intercepts `<a data-router-link href="...">` clicks inside `#app`.
-- Loads new pages via AJAX with custom header `X-Requested-With: barba-mini`.
+- Loads new pages via AJAX with custom header `X-Requested-With: flowza`.
 - Updates browser URL and history using `pushState`.
 - Supports back/forward navigation.
 - Scrolls to top on navigation.
@@ -68,7 +68,105 @@ Hooks receive context objects and support async functions, enabling rich control
 
 ## Installation
 
-Simply include the `BarbaMini.js` script on your page:
+Simply include the `Flowza.js` script on your page:
 
 ```html
-<script src="BarbaMini.js"></script>
+<script src="Flowza.js"></script>
+
+---
+
+## Usage
+
+### HTML Setup
+
+```html
+<div id="app" data-view="home">
+  <!-- Your page content here -->
+  <a data-router-link href="/about">About</a>
+</div>
+
+---
+
+---
+
+### Prefetching & Caching
+
+```markdown
+## Prefetching & Caching
+
+### Prefetching
+
+- FlowzaJS prefetches linked pages automatically when a user hovers over links with `data-router-link` for more than 80ms.
+- Prefetching loads and caches the page content to speed up subsequent navigation.
+
+### Caching
+
+- Last 10 visited pages are cached to improve performance.
+- Cached pages are served instantly without additional network requests.
+- Cache size and eviction can be customized by modifying internal constants.
+
+This behavior is automatic and requires no additional configuration.
+
+---
+
+## Advanced Usage
+
+- Integrate animation libraries (GSAP, Anime.js) for complex transitions.
+- Use lifecycle hooks to add analytics, authorization checks, or UI updates.
+- Customize asset injection/removal for fonts or additional resources.
+- Extend navigation logic by overriding `Flowza.go(url)` method.
+- Handle API data fetching combined with page transitions.
+
+---
+
+## Example
+
+```html
+<div id="app" data-view="home">
+  <h1>Home Page</h1>
+  <a data-router-link href="/about">Go to About</a>
+</div>
+
+<script src="Flowza.js"></script>
+<script>
+  Flowza.useTransition('slideLeft');
+
+  Flowza.on('beforeEnter', (ctx) => {
+    console.log('Entering view:', ctx.view);
+  });
+</script>
+
+---
+
+---
+
+### License
+
+```markdown
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Contribution
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/yourusername/flowzajs/issues).
+
+You can contribute by:
+
+- Reporting bugs
+- Suggesting features
+- Submitting pull requests
+
+Please follow the code style and write tests when applicable.
+
+---
+
+## Thanks
+
+FlowzaJS is inspired by modern SPA routers and page transition libraries, focusing on zero dependencies and minimal overhead.
+
+Thank you for using FlowzaJS — enjoy smooth navigation! 🚀
