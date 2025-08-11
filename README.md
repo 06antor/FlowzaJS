@@ -89,9 +89,6 @@ Simply include the `Flowza.js` script on your page:
 
 ---
 
----
-
-### Prefetching & Caching
 
 
 ## Prefetching & Caching
@@ -141,7 +138,6 @@ This behavior is automatic and requires no additional configuration.
 
 ---
 
----
 
 ### License
 
@@ -156,7 +152,7 @@ This project is licensed under the MIT License.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/yourusername/flowzajs/issues).
+Feel free to check [issues page](https://github.com/06antor/FlowzaJS/issues).
 
 You can contribute by:
 
