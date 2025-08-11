@@ -71,7 +71,7 @@ Hooks receive context objects and support async functions, enabling rich control
 Simply include the `Flowza.js` script on your page:
 
 ```html
-<script src="Flowza.js"></script>
+<script src="Flowza.js"></script>```
 
 ---
 
