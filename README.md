@@ -83,7 +83,7 @@ Simply include the `Flowza.js` script on your page:
 <div id="app" data-view="home">
   <!-- Your page content here -->
   <a data-router-link href="/about">About</a>
-</div>
+</div>```
 
 ---
 
@@ -91,7 +91,7 @@ Simply include the `Flowza.js` script on your page:
 
 ### Prefetching & Caching
 
-```markdown
+
 ## Prefetching & Caching
 
 ### Prefetching
@@ -134,7 +134,7 @@ This behavior is automatic and requires no additional configuration.
   Flowza.on('beforeEnter', (ctx) => {
     console.log('Entering view:', ctx.view);
   });
-</script>
+</script>```
 
 ---
 
@@ -142,7 +142,7 @@ This behavior is automatic and requires no additional configuration.
 
 ### License
 
-```markdown
+
 ## License
 
 This project is licensed under the MIT License.
