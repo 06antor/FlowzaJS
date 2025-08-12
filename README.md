@@ -87,8 +87,8 @@ Simply include the `Flowza.js` script on your page:
 </div>
 ```
 
----
-## Using `data-init` Attribute 
+
+### Using `data-init` Attribute 
 
 - Add `data-init` to `<link>` and `<script>` tags for **page-specific** CSS and JS assets.
 
