@@ -88,9 +88,24 @@ Simply include the `Flowza.js` script on your page:
 ```
 
 ---
+## Using `data-init` Attribute 
+
+- Add `data-init` to `<link>` and `<script>` tags for **page-specific** CSS and JS assets.
+
+```html
+<link rel="stylesheet" href="/css/page.css" data-init>
+<script src="/js/page.js" data-init></script>
+```
+- Flowza injects these assets on page navigation when needed.
+
+- It removes previously loaded data-init assets if they’re not required on the new page.
+
+- This ensures page-specific scripts/styles load fresh without cluttering the app.
 
 
+Use data-init to keep your dynamic navigation efficient and clean.
 
+---
 ## Prefetching & Caching
 
 ### Prefetching
@@ -139,7 +154,6 @@ This behavior is automatic and requires no additional configuration.
 ---
 
 
-### License
 
 
 ## License
