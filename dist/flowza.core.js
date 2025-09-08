@@ -466,13 +466,13 @@
                     window.scrollTo({
                         top: prevScroll,
                         left: 0,
-                        behavior: "smooth"
+                        behavior: "auto"
                     });
                 } else {
                     window.scrollTo({
                         top: 0,
                         left: 0,
-                        behavior: "smooth"
+                        behavior: "auto"
                     });
                 }
                 this.currentURL = newPath;
