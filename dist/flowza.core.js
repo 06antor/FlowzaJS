@@ -270,6 +270,7 @@
             this.trackAssets(document);
             this.bindLinks();
             //-----
+            
 
             //-----
             window.addEventListener('popstate', () => {
@@ -338,9 +339,13 @@
                     if (this.currentURL) this.scrollPositions[location.pathname + location.search + location.hash] = window.scrollY;
 
                     const target = document.querySelector(url);
-                    if (target) target.scrollIntoView({
+                    if (target) {target.scrollIntoView({
                         behavior: "auto"
                     });
+                 //------       
+                 currentPage = window.location.pathname;
+                 //------
+                    }
                     else window.scrollTo({
                         top: 0,
                         left: 0,
@@ -440,9 +445,13 @@
 
                 // Scroll to element (or top if not found)
                 const target = document.querySelector(newHash);
-                if (target) target.scrollIntoView({
+                if (target) { target.scrollIntoView({
                     behavior: "auto"
                 });
+                //--------
+                currentPage = window.location.pathname;
+                //--------
+                }
                 else window.scrollTo({
                     top: 0,
                     left: 0,
@@ -466,13 +475,13 @@
                     window.scrollTo({
                         top: prevScroll,
                         left: 0,
-                        behavior: "auto"
+                        behavior: "smooth"
                     });
                 } else {
                     window.scrollTo({
                         top: 0,
                         left: 0,
-                        behavior: "auto"
+                        behavior: "smooth"
                     });
                 }
                 this.currentURL = newPath;
@@ -773,6 +782,7 @@
     })
     document.addEventListener('DOMContentLoaded', () => {
         flowza.init().catch(console.error);
+        
     });
     window.flowza._Router = Router;
 })();
