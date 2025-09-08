@@ -324,6 +324,9 @@
                         left: 0,
                         behavior: "auto"
                     });
+                                    //--------
+                 currentPage = window.location.pathname;
+                 //--------
 
                     if (history) window.history.pushState({}, '', url);
 
@@ -339,18 +342,17 @@
                     if (this.currentURL) this.scrollPositions[location.pathname + location.search + location.hash] = window.scrollY;
 
                     const target = document.querySelector(url);
-                    if (target) {target.scrollIntoView({
+                    if (target) target.scrollIntoView({
                         behavior: "auto"
                     });
-                 //------       
-                 currentPage = window.location.pathname;
-                 //------
-                    }
                     else window.scrollTo({
                         top: 0,
                         left: 0,
                         behavior: "auto"
                     });
+                    //------       
+                    currentPage = window.location.pathname;
+                    //------
 
                     if (history) window.history.pushState({}, '', url);
 
@@ -445,18 +447,19 @@
 
                 // Scroll to element (or top if not found)
                 const target = document.querySelector(newHash);
-                if (target) { target.scrollIntoView({
+                if (target)  target.scrollIntoView({
                     behavior: "auto"
                 });
-                //--------
-                currentPage = window.location.pathname;
-                //--------
-                }
+
+                
                 else window.scrollTo({
                     top: 0,
                     left: 0,
                     behavior: "auto"
                 });
+                                //--------
+                currentPage = window.location.pathname;
+                //--------
 
                 // Update currentURL with hash
                 this.currentURL = newPath + newHash;
@@ -475,13 +478,13 @@
                     window.scrollTo({
                         top: prevScroll,
                         left: 0,
-                        behavior: "smooth"
+                        behavior: "auto"
                     });
                 } else {
                     window.scrollTo({
                         top: 0,
                         left: 0,
-                        behavior: "smooth"
+                        behavior: "auto"
                     });
                 }
                 this.currentURL = newPath;
