@@ -1,0 +1,16 @@
+{
+  "name": "your-lib-name",
+  "version": "0.1.0",
+  "description": "A lightweight single-file SPA transition library",
+  "main": "dist/yourlib.js",
+  "module": "dist/yourlib.esm.js",
+  "keywords": ["spa", "router", "transition", "javascript"],
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^3.0.0"
+  }
+}
