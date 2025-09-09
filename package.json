@@ -1,11 +1,11 @@
 {
-  "name": "your-lib-name",
-  "version": "0.1.0",
+  "name": " flowza JS",
+  "version": "1.3.8",
   "description": "A lightweight single-file SPA transition library",
-  "main": "dist/yourlib.js",
-  "module": "dist/yourlib.esm.js",
+  "main": "dist/flowza.core.js",
+  "module": "dist/flowza.esm.js",
   "keywords": ["spa", "router", "transition", "javascript"],
-  "author": "Your Name",
+  "author": " Amir Hamza",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c"
