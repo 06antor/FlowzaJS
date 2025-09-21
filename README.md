@@ -3,7 +3,9 @@
 ![logoFlowza](logoFlowza.jpg)
 # FlowzaJS
 
-A lightweight, zero-dependency client-side router and page transition library for building fast, smooth, SPA-like navigation experiences. For more  visit offical [FlowzaJS website](https://flowzajs.netlify.app)
+A lightweight, zero-dependency client-side router and page transition library for building fast, smooth, SPA-like navigation experiences.
+
+This is just a Quick Guide. For more  visit offical [FlowzaJS website](https://flowzajs.netlify.app)
 
 ---
 
